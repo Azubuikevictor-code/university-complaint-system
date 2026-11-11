@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Complaint</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="/student/dashboard.html"
+          ><span class="brand-mark"><i data-lucide="messages-square"></i></span
+          >Student Portal</a
+        ><button class="theme-button" type="button" data-theme-toggle>
+          <i data-lucide="moon"></i><span data-theme-label>Dark mode</span>
+        </button>
+      </nav>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <nav>
+          <a href="/student/dashboard.html"
+            ><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a
+          ><a class="active" href="/student/submit.html"
+            ><i data-lucide="file-plus-2"></i><span>Submit Complaint</span></a
+          ><a href="/student/complaints.html"
+            ><i data-lucide="list-checks"></i><span>My Complaints</span></a
+          ><a href="#" data-logout
+            ><i data-lucide="log-out"></i><span>Logout</span></a
+          >
+        </nav>
+      </aside>
+      <main class="dashboard-main">
+        <h1>Submit a Complaint</h1>
+        <section class="card">
+          <div id="complaintAlert" class="alert" hidden></div>
+          <form id="submitComplaintForm" class="form-grid">
+            <div class="form-row">
+              <label for="subject">Subject</label
+              ><input
+                id="subject"
+                name="subject"
+                minlength="5"
+                maxlength="150"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="category">Category</label
+              ><select id="category" name="category" required>
+                <option value="">Select a category</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="description">Detailed description</label
+              ><textarea
+                id="description"
+                name="description"
+                minlength="10"
+                maxlength="5000"
+                required
+              ></textarea>
+            </div>
+            <button id="submitComplaintButton" class="button" type="submit">
+              Submit Complaint
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/vendor/lucide/lucide.min.js"></script>
+    <script src="/js/icons.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth-session.js"></script>
+    <script src="/js/student.js"></script>
+  </body>
+</html>

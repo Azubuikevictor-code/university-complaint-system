@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | University Complaints</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="/admin/dashboard.html"
+          ><span class="brand-mark"><i data-lucide="shield-check"></i></span
+          >Administrator Portal</a
+        ><button class="theme-button" type="button" data-theme-toggle>
+          <i data-lucide="moon"></i><span data-theme-label>Dark mode</span>
+        </button>
+      </nav>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <nav>
+          <a class="active" href="/admin/dashboard.html"
+            ><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a
+          ><a href="/admin/complaints.html"
+            ><i data-lucide="clipboard-list"></i><span>All Complaints</span></a
+          ><a href="/admin/students.html"
+            ><i data-lucide="users"></i><span>Students</span></a
+          ><a href="#" data-logout
+            ><i data-lucide="log-out"></i><span>Logout</span></a
+          >
+        </nav>
+      </aside>
+      <main class="dashboard-main">
+        <h1>Administrator Dashboard</h1>
+        <div id="adminAlert" class="alert" hidden></div>
+        <section class="stats-grid" id="adminStats"></section>
+        <section class="card" style="margin-top: 18px">
+          <h2>Recent Complaints</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Reference</th>
+                  <th>Student</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="recentAdminComplaints"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/vendor/lucide/lucide.min.js"></script>
+    <script src="/js/icons.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth-session.js"></script>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

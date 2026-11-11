@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard | University Complaints</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="/student/dashboard.html"
+          ><span class="brand-mark"><i data-lucide="messages-square"></i></span
+          >Student Portal</a
+        ><button class="theme-button" type="button" data-theme-toggle>
+          <i data-lucide="moon"></i><span data-theme-label>Dark mode</span>
+        </button>
+      </nav>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <nav>
+          <a class="active" href="/student/dashboard.html"
+            ><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a
+          ><a href="/student/submit.html"
+            ><i data-lucide="file-plus-2"></i><span>Submit Complaint</span></a
+          ><a href="/student/complaints.html"
+            ><i data-lucide="list-checks"></i><span>My Complaints</span></a
+          ><a href="#" data-logout
+            ><i data-lucide="log-out"></i><span>Logout</span></a
+          >
+        </nav>
+      </aside>
+      <main class="dashboard-main">
+        <h1>Student Dashboard</h1>
+        <div id="studentAlert" class="alert" hidden></div>
+        <section class="stats-grid" id="studentStats"></section>
+        <section class="card" style="margin-top: 18px">
+          <h2>Recent Complaints</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Reference</th>
+                  <th>Subject</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="recentComplaints"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/vendor/lucide/lucide.min.js"></script>
+    <script src="/js/icons.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth-session.js"></script>
+    <script src="/js/student.js"></script>
+  </body>
+</html>

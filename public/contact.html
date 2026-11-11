@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | University Complaints</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="brand" href="/"
+          ><span class="brand-mark"><i data-lucide="messages-square"></i></span
+          >University Complaints</a
+        >
+        <button
+          class="menu-button icon-button"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+        >
+          <i data-lucide="menu"></i><span>Menu</span>
+        </button>
+        <div class="nav-links" data-mobile-menu>
+          <a href="/">Home</a><a href="/features.html">Features</a
+          ><a href="/#faqs">FAQs</a
+          ><a href="/contact.html" aria-current="page">Contact</a
+          ><a href="/login.html">Login</a
+          ><button class="theme-button" type="button" data-theme-toggle>
+            <i data-lucide="moon"></i><span data-theme-label>Dark mode</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Support centre</span>
+          <h1>Contact the project support team.</h1>
+          <p>
+            Use this form for account assistance, complaint guidance, platform support, or general enquiries.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container contact-layout">
+          <aside class="contact-details">
+            <span class="eyebrow">Get in touch</span>
+            <h2>Support information</h2>
+            <div class="contact-item">
+              <span class="feature-icon"><i data-lucide="mail"></i></span>
+              <div>
+                <strong>Email</strong
+                ><a href="/contact.html" data-support-email>Contact support</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="feature-icon"><i data-lucide="clock-3"></i></span>
+              <div>
+                <strong>Response time</strong>
+                <p>Support enquiries are reviewed during service hours.</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="feature-icon"
+                ><i data-lucide="shield-check"></i
+              ></span>
+              <div>
+                <strong>Privacy</strong>
+                <p>Do not include passwords or sensitive personal records.</p>
+              </div>
+            </div>
+          </aside>
+          <section class="card contact-form-card">
+            <h2>Send a message</h2>
+            <div id="contactAlert" class="alert" hidden></div>
+            <form id="contactForm" class="form-grid">
+              <div class="form-row">
+                <label for="contactName">Full name</label
+                ><input
+                  id="contactName"
+                  name="name"
+                  minlength="2"
+                  maxlength="100"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="contactEmail">Email address</label
+                ><input id="contactEmail" name="email" type="email" required />
+              </div>
+              <div class="form-row">
+                <label for="contactSubject">Subject</label
+                ><input
+                  id="contactSubject"
+                  name="subject"
+                  minlength="3"
+                  maxlength="150"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="contactMessage">Message</label
+                ><textarea
+                  id="contactMessage"
+                  name="message"
+                  minlength="10"
+                  maxlength="3000"
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+                class="honeypot"
+                aria-hidden="true"
+              /><button id="contactButton" class="button" type="submit">
+                <i data-lucide="send"></i><span>Send message</span>
+              </button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong class="footer-brand">University Complaints</strong>
+          <p>
+            A complete platform for transparent university complaint
+            management, communication, and resolution.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="/">Home</a><a href="/features.html">Features</a
+          ><a href="/login.html">Login</a><a href="/register.html">Register</a>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <a href="/contact.html">Contact</a><a href="/#faqs">FAQs</a
+          ><a href="/student/dashboard.html">Student dashboard</a>
+        </div>
+        <div>
+          <h3>Account</h3>
+          <a href="/login.html">Student login</a
+          ><a href="/login.html">Administrator login</a
+          ><a href="/contact.html" data-support-link>Contact support</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-current-year></span> University Complaints</span
+        ><span>University service platform</span>
+      </div>
+    </footer>
+    <script src="/vendor/lucide/lucide.min.js"></script>
+    <script src="/js/icons.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/support.js"></script>
+  </body>
+</html>

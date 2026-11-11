@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Complaints</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="/admin/dashboard.html"
+          ><span class="brand-mark"><i data-lucide="shield-check"></i></span
+          >Administrator Portal</a
+        ><button class="theme-button" type="button" data-theme-toggle>
+          <i data-lucide="moon"></i><span data-theme-label>Dark mode</span>
+        </button>
+      </nav>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <nav>
+          <a href="/admin/dashboard.html"
+            ><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a
+          ><a class="active" href="/admin/complaints.html"
+            ><i data-lucide="clipboard-list"></i><span>All Complaints</span></a
+          ><a href="/admin/students.html"
+            ><i data-lucide="users"></i><span>Students</span></a
+          ><a href="#" data-logout
+            ><i data-lucide="log-out"></i><span>Logout</span></a
+          >
+        </nav>
+      </aside>
+      <main class="dashboard-main">
+        <h1>All Complaints</h1>
+        <div id="adminAlert" class="alert" hidden></div>
+        <form id="adminFilters" class="filters">
+          <input name="search" placeholder="Reference or subject" /><select
+            name="status"
+          >
+            <option value="">All statuses</option>
+            <option>Submitted</option>
+            <option>Under Review</option>
+            <option>In Progress</option>
+            <option>Resolved</option>
+            <option>Rejected</option></select
+          ><select name="category">
+            <option value="">All categories</option>
+            <option>Academic Issues</option>
+            <option>Examination Issues</option>
+            <option>Registration Issues</option>
+            <option>Accommodation</option>
+            <option>Departmental Issues</option>
+            <option>Financial Issues</option>
+            <option>ICT and Portal Issues</option>
+            <option>Other</option></select
+          ><select name="priority">
+            <option value="">All priorities</option>
+            <option>Low</option>
+            <option>Normal</option>
+            <option>High</option>
+            <option>Urgent</option></select
+          ><button class="button" type="submit">Apply</button>
+        </form>
+        <section class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Reference</th>
+                <th>Student</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="adminComplaints">
+              <tr>
+                <td colspan="6" class="empty-state">Loading complaints...</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="/vendor/lucide/lucide.min.js"></script>
+    <script src="/js/icons.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth-session.js"></script>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>
